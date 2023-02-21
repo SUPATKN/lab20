@@ -8,7 +8,10 @@
 using namespace std;
 
 struct student{
-
+	char name[100];
+	int id;
+	char gender;
+	double gpa;
     //Define struct student with four member (name ,id , gender, gpa);
     
 };
@@ -20,7 +23,7 @@ struct course{
 	vector<student *> student_list;
 };
 
-student * findstudent(vector<student> allstudents,int key){ //There is something wrong in this line.
+student * findstudent(vector<student> &allstudents,int key){ //There is something wrong in this line.
 	for(unsigned int i = 0; i < allstudents.size(); i++){
 		if(allstudents[i].id  == key) return &allstudents[i];
 	}
